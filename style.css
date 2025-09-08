@@ -13,6 +13,8 @@
   z-index: 100;
   display: flex;
   justify-content: center;
+  height: 90px; /* Increased navbar height */
+  align-items: center;
 }
 
 .navbar {
@@ -1048,7 +1050,7 @@ img,
 }
 
 .aboutushero-overlay {
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   width: 100%;
   height: 100%;
   display: flex;
