@@ -18,8 +18,14 @@
 }
 
 .navbar {
-  width: 90%;
-  max-width: 1200px;
+  background: #779c76;
+  padding: 0;
+  width: 100%;
+}
+
+.navbar {
+  width: 95%;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -29,26 +35,30 @@
   justify-content: space-between;
   list-style: none;
   margin: 0;
-  padding: 10px 0;
-  width: 100%;
+  padding: 0 2vw;
+  height: 80px;
   position: relative; /* Add this */
 }
 
 .navbar li {
-  margin: 0 10px;
+  margin: 0 1vw;
+  display: flex;
+  align-items: center;
 }
 
 .navbar a {
-  color: #000000;
+  color: #111;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1em; /* Slightly smaller font */
-  transition: color 0.2s;
-  padding: 6px 8px; /* Add a little padding for click area */
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  transition: background 0.2s, color 0.2s;
 }
 
 .navbar a:hover {
-  color: #ffffff;
+  background: #222;
+  color: #fff;
 }
 
 .navbar .logo {
@@ -75,7 +85,7 @@
 }
 
 .navbar .logo img {
-  height: 50px; /* Bigger logo */
+  height: 90px; /* Bigger logo */
   width: auto;
   display: block;
   margin: 0 6px;
@@ -90,6 +100,8 @@
   align-items: center;
   padding: 40px 0 0 0;
   background: #779c76;
+  width: 100%;
+  min-height: 700px;
 }
 
 .hero-image {
