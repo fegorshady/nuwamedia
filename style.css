@@ -685,6 +685,20 @@
   color: #779c76;
 }
 
+.footer-address,
+.footer-contact {
+  font-size: 1.15em;
+  color: #111;
+  margin-bottom: 12px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.footer-contact a {
+  color: #222;
+  text-decoration: underline;
+  margin-right: 8px;
+}
+
 .footer-bottom {
   text-align: center;
   padding: 18px 0 8px 0;
