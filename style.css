@@ -1166,7 +1166,7 @@ img,
 }
 
 .aboutus-mission-section {
-  background: #87a987;
+  background: #779c76;
   width: 100%;
   min-height: 320px;
   display: flex;
@@ -1313,7 +1313,7 @@ img,
 }
 
 .team-socials a:hover {
-  color: #636060;
+  color: #222;
 }
 
 @media (max-width: 900px) {
