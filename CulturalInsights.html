@@ -442,10 +442,14 @@
           </nav>
         </div>
         <div class="footer-subscribe">
-          <form class="subscribe-form" onsubmit="return false;">
-            <input type="email" placeholder="Enter your email" required />
+          <form class="subscribe-form" id="subscribeForm">
+            <input type="email" name="email" placeholder="Enter your email" required />
+            <input type="hidden" name="_subject" value="New Newsletter Subscription">
+            <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
             <button type="submit">Subscribe</button>
           </form>
+          <p id="responseMessage"></p>
         </div>
         <div class="footer-address">
           <strong>Address:</strong><br />
@@ -477,5 +481,33 @@
         © 2025 NÚWÀ MEDIA. All rights reserved.
       </div>
     </footer>
+    <script>
+    document.getElementById("subscribeForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+      const responseMessage = document.getElementById("responseMessage");
+
+      fetch("https://formsubmit.co/nuwamedia@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          responseMessage.innerText = "✅ Thank you for subscribing!";
+          document.querySelector('input[name="email"]').value = ''; // Clear input
+          // Note: _next redirect will override this message if set up
+        } else {
+          responseMessage.innerText = "❌ Submission failed. Please try again.";
+        }
+      })
+      .catch(error => {
+        responseMessage.innerText = "❌ Something went wrong. Please check your connection or try again later.";
+      });
+    });
+  </script>
   </body>
 </html>
